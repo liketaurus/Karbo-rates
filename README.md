@@ -4,10 +4,10 @@
 <table border="0">
   <tr>
     <td>
-      ![ ](https://github.com/liketaurus/Karbo-rates/blob/master/APK/screen.png?raw=true)
+      <img src="https://github.com/liketaurus/Karbo-rates/blob/master/APK/screen.png?raw=true">
     </td>
     <td>
-      ![ ](https://github.com/liketaurus/Karbo-rates/blob/master/APK/screen-menu.png?raw=true)
+      <img src="https://github.com/liketaurus/Karbo-rates/blob/master/APK/screen-menu.png?raw=true">
     </td>
   </tr>
   </table>
