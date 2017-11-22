@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css"
+    media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+  <!-- , height=device-height -->
+
+  <style>
+    .navbar-fixed { z-index: 9999; }
+  </style>
+</head>
+
+<body class="blue lighten-3">
+  
+  <!-- Modal Structure -->
+  <div id="aboutmodal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>
+        <i class="material-icons">info_outline</i>&nbsp;Про...</h4>
+      <p>Це лише працюючий прототип, який відображає поточний курс карбо(ванця) і також може використовуватись для перевірки чи біржа онлайн.
+      </p>
+      <p>
+        У мене в планах ще багато фішок (віджет, повідомлення).
+        <strong>Якщо ви хочете, аби вони з'явились швидше, підтримайте розробку невеличкою пожертвою</strong> у карбованцях!
+      </p>
+      <p>
+        <strong style="font-size: 1.2em;">Олександр Бабич</strong>&nbsp;&copy;&nbsp;2017
+        <br>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <a href="mailto:ababich@polytechnic.poltava.ua" data-rel="external" onclick="window.open('mailto:info@polytechnic.poltava.ua', '_system')">Напишіть мені</a>
+        &nbsp;
+        <br>
+        <i class="fa fa-chrome" aria-hidden="true"></i>&nbsp;
+        <a data-rel="external" onclick="window.open('http://productivityblog.com.ua/', '_system')">завітайте до мого блога</a>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat " onclick="$('#aboutmodal').modal('close');$('#donatemodal').modal('open');">Підтримати</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Закрити</a>
+    </div>
+  </div>
+
+  <div id="donatemodal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <!-- <h5>Підтримати розробку</h5> -->
+      <div class="row valign-wrapper">
+        <div class="col s6">
+          <img src="Assets/QR.png" alt="" class="responsive-img materialboxed" data-caption="KgBv5Fybm8c5A6rARxD8nVLT7gq7itS4a1TZP2hu9JrAAvmLiK9NrxjCDzoVc7CxfiKpev93fMXY3fkYupUy2KU4H2kvJH8">
+        </div>
+        <div class="col s6">
+          <span class="black-text">
+            Якщо навіть в такому стані програма стала вам у нагоді,
+            <strong>заохотьте мене</strong> працювати активніше.
+            <!-- <span style="font-size: 1.5em;">&#9786;</span> -->
+            <br>Я буду вам дуже вдячний!
+          </span>
+        </div>
+      </div>
+      <div class="col s12">
+        <p class="flow-text">KgBv5Fybm8c5A6rARxD8nVLT7gq7itS4<wbr>a1TZP2hu9JrAAvmLiK9NrxjCDzoVc7Cx<wbr>fiKpev93fMXY3fkYupUy2KU4H2kvJH8</p>
+        <br>
+      </div>
+    </div>
+    <!-- <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div> -->
+  </div>
+
+  <!-- Navigation -->
+   <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue darken-1">
+        <a href="#!" class="brand-logo" styl="margin-top:9px;">
+          <!-- <img src="Images/karbo-logo.png" width="32px" style="display:inline;"></img> -->
+          <!-- <span id="krbIcon">K</span>&nbsp; -->
+          <strong>Карбо</strong><em>ванець</em>
+        </a>
+        <!-- <a href="#" data-activates="mobile-demo" class="left button-collapse"> -->
+        <a href="#" data-activates="mobile-demo" class="right button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="#" onclick="window.open('http://karbo.io/', '_system');">
+              <i class="fa fa-chrome" aria-hidden="true"></i>&nbsp;Офіційний сайт</a>
+          </li>
+          <li>
+            <a href="#" onclick="window.open('https://btc-trade.com.ua/', '_system');">
+              <i class="fa fa-btc" aria-hidden="true"></i>&nbsp;Біржа криптовалют</a>
+          </li>
+          <li>
+            <a href="#" onclick="window.open('https://ru-ru.facebook.com/karbowanec/', '_system');">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;Facebook</a>
+          </li>
+          <li>
+            <a href="#" onclick="window.open('https://telegram.me/karbowanec', '_system');">
+              <i class="fa fa-telegram" aria-hidden="true"></i>&nbsp;Telegram</a>
+          </li>
+          <li>
+            <a class="modal-trigger" href="#aboutmodal" onclick="$('#donatemodal').modal('close');">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;Про програму</a>
+          </li>
+          <li>
+            <a class="modal-trigger" href="#donatemodal">
+              <i class="fa fa-money" aria-hidden="true"></i>&nbsp;Підтримати</a>
+          </li>
+
+        </ul>
+        <ul class="side-nav blue lighten-3 blue-text text-darken-4" id="mobile-demo">
+          <br>
+          <center>
+            <img src="Images/karbo.png" width="100px"></img>
+          </center>
+          <li>
+            <a href="#" onclick="window.open('http://karbo.io/', '_system');">
+              <i class="fa fa-chrome" aria-hidden="true"></i>Сайт</a>
+          </li>
+          <li>
+            <a href="#" onclick="window.open('https://btc-trade.com.ua/', '_system');">
+              <i class="fa fa-btc" aria-hidden="true"></i>Біржа </a>
+          </li>
+          <li>
+            <a href="#" onclick="window.open('https://ru-ru.facebook.com/karbowanec/', '_system');">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>Facebook</a>
+          </li>
+          <li>
+            <a href="#" onclick="window.open('https://telegram.me/karbowanec', '_system');">
+              <i class="fa fa-telegram" aria-hidden="true"></i>Telegram</a>
+          </li>
+          <!-- <hr style="border-color: lightblue;"> --><br>
+          <li>
+            <a class="modal-trigger" href="#aboutmodal" onclick="$('#donatemodal').modal('close');">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>Про...</a>
+          </li>
+          <li>
+            <a class="modal-trigger" href="#donatemodal">
+              <i class="fa fa-money" aria-hidden="true"></i>Підтримати</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Cards -->
+  <div class="container">
+    <!-- Page Content goes here -->
+    <div class="row">
+      <div class="col s12">
+
+        <div class="col s12 m6">
+          <br>
+          <div class="card">
+            <br>
+            <div class="card-image">
+              <center>
+                <img src="Images/btc.png" style="width: 140px;"> </center>
+              <br>
+              <!-- <hr> -->
+              <a class="btn-floating halfway-fab waves-effect waves-light blue" onclick="getBtc();" id="refreshBtn">
+                <!-- <i class="material-icons">autorenew</i> -->
+                <i class="fa fa-refresh"></i>
+              </a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">Біржа криптовалют</span>
+              <p>
+                <span id="krb-btc" class="blue-text text-darken-4">1 KRB = 00.00000&#8372;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <br>
+          <div class="card">
+            <!-- <br> -->
+            <div class="card-image">
+              <!-- <center> -->
+              <img src="Images/karbo-wlp.png">
+              <!-- </center> -->
+              <!-- <br>
+              <hr> -->
+              <a class="btn-floating halfway-fab waves-effect waves-light blue" onclick="getOfficial();" id="refreshOff">
+                <!-- <i class="material-icons">autorenew</i> -->
+                <i class="fa fa-refresh"></i>
+              </a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">Офіційний сайт</span>
+              <p>
+                <span id="krb-off" class="blue-text text-darken-4">1 KRB = 00.00000&#8372;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <br>
+          <div class="card">
+            <!-- <br> -->
+            <div class="card-image">
+              <!-- <center> -->
+              <img src="Images/cryptonator.jpg">
+              <!-- </center> -->
+              <!-- <br>
+                <hr> -->
+              <a class="btn-floating halfway-fab waves-effect waves-light blue" onclick="getCrypt();" id="refreshCrypt">
+                <!-- <i class="material-icons">autorenew</i> -->
+                <i class="fa fa-refresh"></i>
+              </a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">CRYPTONATOR</span>
+              <p>
+                <span id="krb-crypt" class="blue-text text-darken-4">1 KRB = 00.00000&#8372;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+
+    function getBtc() {
+      //console.log('getBtc');
+      $('#refreshBtn').html('<i class="fa fa-refresh fa-spin "></i>');
+
+      $.get('https://btc-trade.com.ua/stock/krb_uah').done(
+        function (response) {
+          //console.log(response);
+          var pos = response.indexOf('krb_uah_top_price');
+          var krbUah = response.substring(pos + 20, pos + 28);
+          $('#krb-btc').html('1 KRB =' + krbUah + '&#8372;');
+
+          $('#refreshBtn').html('<i class="fa fa-refresh"></i>');
+
+        }).fail(function () {
+          $('#refreshBtn').html('<i class="fa fa-refresh"></i>');
+          $('#krb-btc').html('<i class="fa fa-exclamation-circle red-text" aria-hidden="true"></i>&nbsp;<span class="red-text">Біржа недоступна</span>');
+
+          Materialize.toast('Біржа недоступна. Можливо, Ви оффлайн?', 3000);
+        });
+    }
+
+    function getOfficial() {
+
+      var krb2usd;
+      var uah2usd;
+      var krb2uah;
+
+      $('#refreshOff').html('<i class="fa fa-refresh fa-spin "></i>');
+      $.when(
+        $.getJSON('http://karbo.io/proxy.php', function (data) {
+          krb2usd = Number(data['0'].price_usd);
+          //console.log(krb2usd);
+        }),
+
+        $.getJSON('https://api.privatbank.ua/p24api/pubinfo?exchange&json', function (newData) {
+          uah2usd = Number(newData['2'].buy);
+          //console.log(uah2usd);
+        })
+
+      ).then(function () {
+        krb2uah = krb2usd * uah2usd;
+        krb2uah = (Math.round(krb2uah * 100) / 100).toFixed(5);
+        $('#krb-off').html('1 KRB =' + krb2uah + '&#8372;');
+        $('#refreshOff').html('<i class="fa fa-refresh"></i>');
+      }).fail(function () {
+        $('#krb-off').html('<i class="fa fa-exclamation-circle red-text" aria-hidden="true"></i>&nbsp;<span class="red-text">API недоступнe</span>');
+        $('#refreshOff').html('<i class="fa fa-refresh"></i>');
+        Materialize.toast('АРІ недоступне. Можливо, Ви оффлайн?', 3000);
+      });
+
+    }
+
+    function getCrypt() {
+
+      $('#refreshCrypt').html('<i class="fa fa-refresh fa-spin "></i>');
+
+      $.get('https://api.cryptonator.com/api/ticker/krb-uah').done(
+        function (response) {
+          //console.log(response);          
+          var krbUah = Number(response.ticker.price).toFixed(5);
+          $('#krb-crypt').html('1 KRB =' + krbUah + '&#8372;');
+
+          $('#refreshCrypt').html('<i class="fa fa-refresh"></i>');
+
+        }).fail(function () {
+          $('#refreshCrypt').html('<i class="fa fa-refresh"></i>');
+          $('#krb-crypt').html('<i class="fa fa-exclamation-circle red-text" aria-hidden="true"></i>&nbsp;<span class="red-text">API недоступнe</span>');
+          Materialize.toast('АРІ недоступне. Можливо, Ви оффлайн?', 3000);
+        });
+
+    }
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".button-collapse").sideNav({
+        menuWidth: 200, // Default is 300
+        edge: 'right', // Choose the horizontal origin
+        draggable: true,
+        closeOnClick: true
+      });
+      $('.modal').modal({
+        opacity: .5, // Opacity of modal background
+        inDuration: 400, // Transition in duration
+        outDuration: 300, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%'
+      });
+
+      $('.materialboxed').materialbox();
+
+      $.ajaxPrefilter(function (options) {
+        if (options.crossDomain && jQuery.support.cors) {
+          var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+          options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+        }
+      });
+
+      getBtc();
+      getOfficial();
+      getCrypt();
+
+    });
+  </script>
+</body>
+
+</html>
