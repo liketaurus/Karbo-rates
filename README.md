@@ -1,6 +1,6 @@
 # Karbo-rates
 Простий мобільний додаток для перегляду поточного курсу [карбо(ванця)](http://karbo.io/)
-<center>
+
 <table>
   <tr>
     <td>
@@ -11,6 +11,6 @@
     </td>
   </tr>
   </table>
-  </center>
+
 
 [Спробувати](https://github.com/liketaurus/Karbo-rates/blob/master/APK/Karbo-alpha.apk?raw=true)
