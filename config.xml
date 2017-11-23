@@ -37,6 +37,9 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    
+    
+    <preference name="SplashScreenDelay" value="5000" />
     <!--
         Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="3.5.0" />
@@ -68,6 +71,8 @@
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
        
         <plugin name="cordova-plugin-inappbrowser" spec="1.7.2" source="npm" />
+      
+        <plugin name="cordova-plugin-splashscreen" source="npm" />
     
 
     <!-- Define app icon for each platform. -->
@@ -101,6 +106,10 @@
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>100</string>
     </gap:config-file>-->
+    
+
+        <splash src="Assets/splash.png" />
+
 
     <!--
         Define access to external domains.
