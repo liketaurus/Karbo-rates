@@ -1,5 +1,6 @@
 # Karbo-rates
 Простий мобільний додаток для перегляду поточного курсу [карбо(ванця)](http://karbo.io/)
+
 Відображає поточний курс з біржі BTC TRADE UA, офіційного сайту та з Кріптонатора.
 
 Використано Materialize CSS, jQuery, FontAwesome, Adobe Phonegap Build.
